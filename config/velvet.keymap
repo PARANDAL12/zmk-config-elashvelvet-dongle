@@ -295,6 +295,7 @@
         compatible = "zmk,keymap";
 
         BASE {
+            display-name = "BASE";
             label = "BASE";
             bindings = <
 &aholdtap LS(SEMI) SEMI  &aholdtap LS(APOS) APOS  &holdtap FSLH TILDE  &kp ESC   &kp LS(N9)   &kp LS(N0)              &kp HOME     &kp END      &kp PAGE_UP    &kp PAGE_DOWN  &kp BSLH  &kp LGUI
@@ -306,6 +307,7 @@
         };
 
         NUM {
+            display-name = "NUM";
             label = "NUM";
             bindings = <
 &trans     &trans     &trans                     &trans                     &trans                     &trans                    &trans             &trans            &trans          &trans              &trans   &trans
@@ -317,6 +319,7 @@
         };
 
         FN {
+            display-name = "FN";
             label = "FN";
             bindings = <
 &kp GRAVE  &trans  &kp INS  &trans  &trans      &trans                  &trans             &trans       &trans     &trans         &trans   &trans
@@ -328,6 +331,7 @@
         };
 
         GAME {
+            display-name = "GAME";
             label = "GAME";
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                &trans     &trans  &trans  &trans  &trans  &trans
@@ -339,6 +343,7 @@
         };
 
         EXTRA {
+            display-name = "EXTRA";
             label = "EXTRA";
             bindings = <
 &trans  &trans   &trans     &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
@@ -350,6 +355,7 @@
         };
 
         LAYER5 {
+            display-name = "LAYER5";
             label = "LAYER5";
             bindings = <
 &trans  &trans  &trans         &trans    &trans       &trans             &trans  &trans  &trans  &trans  &trans  &trans
@@ -361,6 +367,7 @@
         };
 
         LAYER6 {
+            display-name = "LAYER6";
             label = "LAYER6";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
@@ -372,6 +379,7 @@
         };
 
         LAYER7 {
+            display-name = "LAYER7";
             label = "LAYER7";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
@@ -383,6 +391,7 @@
         };
 
         LAYER8 {
+            display-name = "LAYER8";
             label = "LAYER8";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
@@ -394,6 +403,7 @@
         };
 
         RESET {
+            display-name = "RESET";
             label = "RESET";
             bindings = <
 &bootloader  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans

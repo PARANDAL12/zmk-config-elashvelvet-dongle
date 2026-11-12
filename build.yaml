@@ -4,6 +4,7 @@
 include:
   - board: xiao_ble//zmk
     shield: velvet_dongle prospector_adapter
+    cmake-args: -DCONFIG_ZMK_BACKLIGHT=n
     artifact-name: prospector_dongle
   - board: nice_nano//zmk
     shield: velvet_left nice_view

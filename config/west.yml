@@ -83,6 +83,3 @@ manifest:
     - name: mario-peripheral-animation
       remote: gpeye
       revision: main
-    - name: prospector-zmk-module
-      remote: carrefinho
-      revision: feat/new-status-screens

@@ -3,6 +3,7 @@
 include:
   - board: xiao_ble//zmk
     shield: velvet_dongle
+    cmake-args: -DCONFIG_ZMK_BACKLIGHT=n -DCONFIG_ZMK_DISPLAY=n
     artifact-name: velvet_dongle_basic
   - board: nice_nano//zmk
     shield: velvet_left nice_view

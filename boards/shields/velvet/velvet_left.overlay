@@ -8,6 +8,10 @@
 #include "trackball.dtsi"
 #include <behaviors/battery_history_request.dtsi>
 
+&trackball_split {
+    status = "disabled";
+};
+
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
     row-gpios

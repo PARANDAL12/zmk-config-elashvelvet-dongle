@@ -84,7 +84,7 @@ manifest:
     # ---- Prospector display module (user-maintained fork) ----
     - name: prospector-zmk-module
       remote: parandal12
-      revision: main
+      revision: core/zephyr-4-1
     # ---- third-party helpers still needed by this firmware ----
     - name: mario-peripheral-animation
       remote: gpeye

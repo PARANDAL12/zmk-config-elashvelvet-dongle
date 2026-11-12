@@ -1,9 +1,9 @@
 layout: {zmk_keyboard: velvet}
 layers:
   BASE:
-  - {t: ;, s: ':'}
-  - {t: Sft+', s: Sft+"}
-  - {t: /, s: '?'}
+  - {t: ;, h: Sft+;, s: ':'}
+  - {t: '''', h: Sft+'}
+  - {t: '~', h: /}
   - Esc
   - {t: Sft+9, s: Sft+(}
   - {t: Sft+0, s: Sft+)}
@@ -15,10 +15,10 @@ layers:
   - LGUI
   - $$mdi:apple-keyboard-caps$$
   - B
-  - W
-  - E
-  - R
-  - '&td_t'
+  - {t: W, s: Sft+Ctl+S}
+  - {t: E, s: Alt+Ctl+End}
+  - {t: R, s: Sft+Alt+G}
+  - {t: T, s: Ctl+Sft+F10}
   - '&mkp RCLK'
   - Y
   - U
@@ -27,7 +27,7 @@ layers:
   - {t: '''', s: '"'}
   - {t: '[', s: '{'}
   - $$mdi:apple-keyboard-option$$
-  - A
+  - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - D
   - F
@@ -40,11 +40,11 @@ layers:
   - P
   - {t: ']', s: '}'}
   - $$mdi:backspace-reverse$$
-  - '&td_q'
-  - Z
-  - X
-  - C
-  - {t: V, h: EXTRA}
+  - {t: Q, h: Sft+Q}
+  - {t: Z, s: Sft+Ctl+F10}
+  - {t: X, s: Meh+N}
+  - {t: C, s: Ctl+Sft+C}
+  - {t: V, s: Sft+Ctl+V}
   - '&mkp LCLK'
   - B
   - N
@@ -60,13 +60,13 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: NUM}
   - {t: '$$mdi:keyboard-space$$', h: FN}
   - {t: '$$mdi:backspace-outline$$', type: backspace}
-  - $$mdi:apple-keyboard-control$$
+  - {t: NUM, h: to}
   - {t: GAME, h: to}
   NUM:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '`', s: '~'}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -77,9 +77,9 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+N
   - {t: ',', s: <}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
+  - {t: '7', h: Sft+7, s: '&'}
+  - {t: '8', h: Sft+8, s: '*'}
+  - {t: '9', h: Sft+9, s: (}
   - {t: '=', s: +}
   - '&mkp RCLK'
   - Ctl+PgUp
@@ -90,9 +90,9 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+Y
   - {t: '-', s: _}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
+  - {t: '4', h: Sft+4, s: $}
+  - {t: '5', h: Sft+5, s: '%'}
+  - {t: '6', h: Sft+6, s: ^}
   - {t: Sft+=, s: Sft++}
   - '&mkp MCLK'
   - Ctl+PgDn
@@ -103,14 +103,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ., s: '>'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
+  - {t: '1', h: Sft+1, s: '!'}
+  - {t: '2', h: Sft+2, s: '@'}
+  - {t: '3', h: Sft+3, s: '#'}
   - {t: '0', s: )}
   - '&mkp LCLK'
   - Home
   - PgUp
-  - '&msc SCRL_DOWN'
+  - '&mkp MB4'
   - PgDn
   - End
   - {t: ▽, type: trans}
@@ -172,7 +172,7 @@ layers:
   - '&mkp LCLK'
   - Home
   - PgUp
-  - {t: ▽, type: trans}
+  - '&mkp MB4'
   - PgDn
   - End
   - {t: ▽, type: trans}
@@ -181,9 +181,9 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held alternate}
-  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - {t: '&mkp MCLK', type: held alternate}
+  - '&mkp RCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   GAME:
@@ -292,7 +292,7 @@ layers:
   - {t: ',', s: <}
   - M
   - N
-  - {type: held}
+  - {t: ▽, type: trans}
   - '&mkp LCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

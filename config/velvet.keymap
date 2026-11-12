@@ -52,6 +52,7 @@
 };
 
 &trackball_listener {
+    status = "okay";
     input-processors = <&zip_xy_scaler 4 5 &zip_mouse_temp_layer EXTRA 700>;
 
     scroll_mode {

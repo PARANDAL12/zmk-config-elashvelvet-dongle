@@ -1,8 +1,7 @@
 #include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
 
- / {
-    split_inputs {
+/ {
+    splits {
         #address-cells = <1>;
         #size-cells = <0>;
 
@@ -16,12 +15,5 @@
         compatible = "zmk,input-listener";
         status = "disabled";
         device = <&trackball_split>;
-
-        scroller {
-            layers = <5>;
-            input-processors =
-                <&zip_xy_to_scroll_mapper &zip_scroll_scaler 1 60>,
-                <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
-        };
     };
 };

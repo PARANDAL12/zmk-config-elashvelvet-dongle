@@ -79,6 +79,10 @@ manifest:
     - name: zmk-feature-runtime-combo
       import: true
     - name: zmk-feature-kscan-diagnostics
+    # ---- Prospector display module (Zephyr 4.1 compatible branch) ----
+    - name: prospector-zmk-module
+      remote: carrefinho
+      revision: core/zephyr-4-1
     # ---- third-party helpers still needed by this firmware ----
     - name: mario-peripheral-animation
       remote: gpeye

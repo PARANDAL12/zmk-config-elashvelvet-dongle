@@ -1,3 +1,4 @@
+#include "../velvet/trackball.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/pwm/pwm.h>
@@ -250,4 +251,9 @@
     pinctrl-0 = <&pwm1_default>;
     pinctrl-1 = <&pwm1_sleep>;
     pinctrl-names = "default", "sleep";
+};
+
+/* Receive the trackball events relayed from the right-hand peripheral. */
+&trackball_listener {
+    status = "okay";
 };

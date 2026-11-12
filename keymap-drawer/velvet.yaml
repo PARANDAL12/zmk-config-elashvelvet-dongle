@@ -26,11 +26,11 @@ layers:
   - O
   - {t: '''', s: '"'}
   - {t: '[', s: '{'}
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:apple-keyboard-option$$', h: EXTRA}
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
-  - D
-  - F
+  - {t: D, s: Ctl+Sft+A}
+  - {t: F, s: Sft+Ctl+F}
   - {t: G, h: '$$mdi:apple-keyboard-control$$'}
   - '&mkp MCLK'
   - H
@@ -274,7 +274,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - P
   - L
   - K

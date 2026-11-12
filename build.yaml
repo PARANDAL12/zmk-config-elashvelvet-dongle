@@ -1,8 +1,8 @@
-# Velvet + XIAO BLE central dongle with Prospector display
+# Velvet + XIAO BLE central dongle (trackball first; display deferred)
 ---
 include:
   - board: xiao_ble//zmk
-    shield: velvet_dongle prospector_adapter
+    shield: velvet_dongle
     cmake-args: -DCONFIG_ZMK_BACKLIGHT=n
     artifact-name: velvet_dongle_basic
   - board: nice_nano//zmk

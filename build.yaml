@@ -1,3 +1,4 @@
+# Baseline build check: configuration unchanged.
 # This file generates the GitHub Actions matrix
 ---
 include:

@@ -11,8 +11,7 @@ include:
     artifact-name: velvet_left
   - board: nice_nano//zmk
     shield: velvet_right nice_view
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: velvet_right
   - board: nice_nano//zmk
     shield: settings_reset

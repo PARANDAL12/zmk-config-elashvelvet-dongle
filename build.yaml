@@ -3,7 +3,7 @@
 ---
 include:
   - board: xiao_ble//zmk
-    shield: velvet_dongle prospector_adapter
+    shield: velvet_dongle
     cmake-args: -DCONFIG_ZMK_BACKLIGHT=n -DCONFIG_PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR=n -DCONFIG_PROSPECTOR_FIXED_BRIGHTNESS=80 -DCONFIG_LV_USE_BAR=y -DCONFIG_LV_USE_FLEX=y -DCONFIG_LV_USE_ROLLER=y
     artifact-name: prospector_dongle
   - board: nice_nano//zmk

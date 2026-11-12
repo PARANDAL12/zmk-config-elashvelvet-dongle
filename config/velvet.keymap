@@ -33,7 +33,32 @@
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&trackball_listener { input-processors = <&zip_xy_scaler 4 5>; };
+/ {
+    /* Keep mouse-side controls and center clicks from dismissing auto-mouse. */
+    zip_mouse_temp_layer: zip_mouse_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        excluded-positions = <
+            6 7 8 9 10 11
+            18
+            19 20 21 22 23 24
+            31
+            32 33 34 35 36 37
+            44
+            45 46 47 48 49 50
+            56 57 58 59 60
+        >;
+    };
+};
+
+&trackball_listener {
+    input-processors = <&zip_xy_scaler 4 5 &zip_mouse_temp_layer EXTRA 700>;
+
+    scroll_mode {
+        layers = <5>;
+        input-processors = <&zip_xy_to_scroll_mapper &zip_scroll_scaler 2 1>;
+    };
+};
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
@@ -344,26 +369,26 @@
         };
 
         EXTRA {
-            display-name = "EXTRA";
-            label = "EXTRA";
+            display-name = "MOUSE";
+            label = "MOUSE";
             bindings = <
-&trans  &trans   &trans     &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp B    &kp O      &kp I   &kp U   &kp Y   &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp P    &kp L      &kp K   &kp J   &kp H   &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp DOT  &kp COMMA  &kp M   &kp N   &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans   &trans     &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
+&kp RIGHT_ALT  &trans  &trans  &trans  &trans  &trans  &mkp MCLK  &mkp MCLK  &mkp MB5  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &lt 5 B  &mkp MB4  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans             &trans  &trans  &mkp RCLK  &trans  &mkp LCLK
             >;
         };
 
-        LAYER5 {
-            display-name = "LAYER5";
-            label = "LAYER5";
+        SCROLL {
+            display-name = "SCROLL";
+            label = "SCROLL";
             bindings = <
-&trans  &trans  &trans         &trans    &trans       &trans             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &trans  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT       &kp DOWN  &kp RIGHT    &trans  &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans    &trans       &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans         &trans    &trans       &trans             &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp RCLK  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MCLK  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans
             >;
         };
 

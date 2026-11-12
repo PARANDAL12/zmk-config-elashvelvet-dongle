@@ -5,17 +5,18 @@
  */
 
 #include "velvet.dtsi"
+#include "trackball.dtsi"
 #include <behaviors/battery_history_request.dtsi>
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
     row-gpios
-	= <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	;
+    = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    ;
     col-gpios
         = <&gpio0 9  GPIO_ACTIVE_HIGH>
         , <&gpio0 31  GPIO_ACTIVE_HIGH>
@@ -30,5 +31,5 @@
 &left_encoder {
     status = "okay";
     a-gpios = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-	b-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 };

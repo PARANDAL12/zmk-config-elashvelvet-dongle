@@ -6,6 +6,7 @@
  * Known Vial-only features that need separate reimplementation are documented in KEYMAP_MIGRATION_NOTES.md.
  */
 
+/* Rebuild trigger: Caps Lock font compatibility fix in Prospector module. */
 #define BASE 0
 #define NUM 1
 #define FN 2

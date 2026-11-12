@@ -4,7 +4,7 @@ include:
   - board: xiao_ble//zmk
     shield: velvet_dongle prospector_adapter
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_BACKLIGHT=n -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    cmake-args: -DCONFIG_ZMK_BACKLIGHT=n -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n -DCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y -DCONFIG_ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN=n
     artifact-name: velvet_dongle_basic
   - board: nice_nano//zmk
     shield: velvet_left nice_view

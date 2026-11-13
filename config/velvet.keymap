@@ -16,6 +16,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35
 
 #include <input/processors.dtsi>
+#include <input/processors/runtime-input-processor.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -53,11 +54,11 @@
 
 &trackball_listener {
     status = "okay";
-    input-processors = <&zip_xy_scaler 4 5 &zip_mouse_temp_layer EXTRA 700>;
+    input-processors = <&mouse_runtime_input_processor &zip_mouse_temp_layer EXTRA 700>;
 
     scroll_mode {
         layers = <5>;
-        input-processors = <&zip_xy_to_scroll_mapper &zip_scroll_scaler 2 1>;
+        input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
     };
 };
 
